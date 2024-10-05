@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Registro Alimento</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="form-container"> <!-- Agregamos un contenedor adicional -->
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Agregar Alimento</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <form (ngSubmit)="onSubmit()">
+          <ion-item>
+            <ion-label position="floating">Nombre:</ion-label>
+            <ion-input type="text" [(ngModel)]="alimento.nombre" name="nombre" required></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Descripción:</ion-label>
+            <ion-textarea [(ngModel)]="alimento.descripcion" name="descripcion" required></ion-textarea>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Precio:</ion-label>
+            <ion-input type="number" [(ngModel)]="alimento.precio" name="precio" required></ion-input>
+          </ion-item>
+          <ion-button type="submit" color="success" expand="block">Agregar</ion-button>
+        </form>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

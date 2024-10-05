@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Administrador</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="welcome-section">
+    <h2>¡Bienvenido, Sergio!</h2>
+    <p>¿Qué haremos hoy..?</p>
+  </div>
+
+  <div class="button-container">
+    <ion-button (click)="onClickRUsuario()">Registrar Usuario</ion-button>
+    <ion-button (click)="onClickUsuario()">Usuarios</ion-button>
+    <ion-button (click)="onClickLog()">Log</ion-button>
+    <ion-button (click)="onClickABebida()">Agregar Bebidas</ion-button>
+    <ion-button (click)="onClickAAlimento()">Agregar Alimento</ion-button>
+    <ion-button (click)="onClickSalir()">Salir</ion-button>
+  </div>
+
+  <div class="profile-icon">
+    <ion-icon name="person-circle-outline"></ion-icon>
+  </div>
+</ion-content>

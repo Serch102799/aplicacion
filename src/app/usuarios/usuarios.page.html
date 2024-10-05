@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Usuarios en el Sistema</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <div class="filter-section">
+      <ion-label>Seleccione el tipo de usuario:</ion-label>
+      <ion-select [(ngModel)]="tipoUsuario" interface="popover">
+        <ion-select-option value="Todos">Todos</ion-select-option>
+        <ion-select-option value="Admin">Admin</ion-select-option>
+        <ion-select-option value="Vendedor">Vendedor</ion-select-option>
+      </ion-select>
+      <ion-button color="primary" (click)="consultar()">Consultar</ion-button>
+    </div>
+
+    <h2>Usuarios Registrados</h2>
+    
+    <div class="table-container">
+      <ion-grid>
+        <ion-row class="header-row">
+          <ion-col>Id</ion-col>
+          <ion-col>Nombre</ion-col>
+          <ion-col>Apellido Paterno</ion-col>
+          <ion-col>Apellido Materno</ion-col>
+          <ion-col>Correo Electrónico</ion-col>
+          <ion-col>Usuario</ion-col>
+          <ion-col>Rol</ion-col>
+        </ion-row>
+
+        <ion-row *ngFor="let usuario of usuarios">
+          <ion-col>{{usuario.id}}</ion-col>
+          <ion-col>{{usuario.nombre}}</ion-col>
+          <ion-col>{{usuario.apellidoPaterno}}</ion-col>
+          <ion-col>{{usuario.apellidoMaterno}}</ion-col>
+          <ion-col>{{usuario.correoElectronico}}</ion-col>
+          <ion-col>{{usuario.usuario}}</ion-col>
+          <ion-col>{{usuario.rol}}</ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+
+    <div class="eliminar-section">
+      <ion-button color="warning" expand="block">Eliminar usuario</ion-button>
+      <div class="eliminar-input">
+        <ion-input placeholder="Ingresa el nombre de usuario a eliminar" 
+                   [(ngModel)]="usuarioAEliminar"></ion-input>
+        <ion-button color="danger" (click)="eliminarUsuario()">Eliminar Usuario</ion-button>
+      </div>
+    </div>
+
+    <ion-button color="primary" expand="block" (click)="regresar()">Regresar</ion-button>
+  </div>
+</ion-content>

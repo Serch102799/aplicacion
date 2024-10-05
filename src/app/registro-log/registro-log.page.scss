@@ -1,0 +1,97 @@
+ion-header {
+    ion-toolbar {
+        --background: black;
+        --color: white;
+        text-align: center;
+
+        .center-title {
+            text-align: center;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+ion-content {
+    --background: url('/assets/img/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100%;
+
+    .form-container {
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.7); 
+        border-radius: 8px; 
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); 
+        width: 90%; 
+        max-width: 500px; 
+        margin: 0 auto; 
+        color: white;
+
+        h3 {
+            text-align: center; 
+            color: #fff; 
+        }
+
+        .divider {
+            height: 1px; 
+            background-color: #fff; 
+            margin: 20px 0;
+        }
+
+        ion-item {
+            --padding-start: 0;
+            --inner-padding-end: 0;
+            margin-bottom: 15px;
+            color: #fff; 
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            flex-direction: column; 
+
+            ion-button {
+                margin-bottom: 10px;
+                color: #fff; 
+            }
+        }
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+
+        ion-grid {
+            width: 80%;
+            border: 1px solid #ccc;
+            background: rgba(255, 255, 255, 0.8); 
+
+            .header-row {
+                font-weight: bold;
+                background-color: #525058;
+            }
+
+            ion-row {
+                border-bottom: 1px solid #504545;
+
+                &:last-child {
+                    border-bottom: none;
+                }
+
+                ion-col {
+                    padding: 10px;
+                    border-right: 1px solid #888585;
+
+                    &:last-child {
+                        border-right: none;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Registro Bebida</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="content-wrapper">
+    <h2 class="page-title">Información de la nueva Bebida</h2>
+    <ion-item lines="none">
+      <ion-label position="floating">Nombre de la Bebida</ion-label>
+      <ion-input [(ngModel)]="bebida.nombre"></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label position="floating">Sabor</ion-label>
+      <ion-input [(ngModel)]="bebida.sabor"></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label position="floating">Marca</ion-label>
+      <ion-input [(ngModel)]="bebida.marca"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Tamaño</ion-label>
+      <ion-input [(ngModel)]="bebida.tamano"></ion-input> <!-- Cambia "tamaño" por "tamano" -->
+    </ion-item>
+    
+    <ion-item lines="none">
+      <ion-label position="floating">Cantidad</ion-label>
+      <ion-input type="number" [(ngModel)]="bebida.cantidad"></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label position="floating">Precio Unitario</ion-label>
+      <ion-input type="number" [(ngModel)]="bebida.precioUnitario"></ion-input>
+    </ion-item>
+
+    <div class="button-group">
+      <ion-button color="success" (click)="agregarBebida()">Agregar Bebida</ion-button>
+      <ion-button color="warning" (click)="regresar()">Regresar</ion-button>
+      <ion-button color="danger" (click)="salir()">Salir</ion-button>
+    </div>
+  </div>
+</ion-content>
